@@ -1,0 +1,98 @@
+<mat-card>
+    <mat-card-content class="main-option-row">
+
+  <!-- <form [formGroup]="heroForm" #formDir="ngForm"> -->
+  <div class="option-box">
+      <div class="box" *ngIf = " swicher_data === 'block-row-1'">
+          <section class="example-section">
+              <mat-checkbox class="example-margin" name="status-1" [(ngModel)]="checked" (change)="showOptions_1($event)" >Checked</mat-checkbox>
+              <mat-checkbox class="example-margin" name="status-2" [(ngModel)]="indeterminate" (change)="showOptions_1($event)" >Indeterminate</mat-checkbox>
+            </section>
+      </div>
+        
+      <div class="box" *ngIf = " swicher_data === 'block-row-2'">
+        <div class="column">
+          <section class="example-section">
+            <label class="example-margin">Align:</label>
+            <mat-radio-group [(ngModel)]="align1" (change)="showOptions_2($event)">
+              <mat-radio-button class="example-margin"  value="start">Start</mat-radio-button>
+              <mat-radio-button class="example-margin"  value="end">End</mat-radio-button>
+            </mat-radio-group>
+          </section>
+          <section class="example-section">
+            <label class="example-margin">Align:</label>
+            <mat-radio-group [(ngModel)]="align2" (change)="showOptions_2($event)">
+              <mat-radio-button class="example-margin"  value="start">Start</mat-radio-button>
+              <mat-radio-button class="example-margin"  value="end">End</mat-radio-button>
+            </mat-radio-group>
+          </section>
+        </div>
+      </div>
+  
+      <div class="box"  *ngIf = " swicher_data === 'block-row-3'">
+          <section class="example-section">
+              <mat-checkbox class="example-margin" name="status-1" [(ngModel)]="checked3" (change)="showOptions_3($event)" >Checked</mat-checkbox>
+              <mat-checkbox class="example-margin" name="status-2" [(ngModel)]="indeterminate3" (change)="showOptions_3($event)" >Indeterminate</mat-checkbox>
+            </section>
+      </div>
+  </div>
+   
+  <!-- </form> -->
+
+   
+
+  <div class="column" >
+    <circle-progress
+      [percent]=value1
+      [radius]="50"
+      [outerStrokeWidth]="6"
+      [innerStrokeWidth]="3"
+      [outerStrokeColor]="'#aa3987'"
+      [innerStrokeColor]="'#fca1e0'"
+      [animation]="true"
+      [animationDuration]="300"
+      value="block-row-1"
+      (click)="swich_list('block-row-1')"
+    ></circle-progress>
+    <circle-progress
+      [percent]=value2
+      [radius]="50"
+      [outerStrokeWidth]="6"
+      [innerStrokeWidth]="3"
+      [outerStrokeColor]="'#aa3987'"
+      [innerStrokeColor]="'#fca1e0'"
+      [animation]="true"
+      [animationDuration]="300"
+      value="block-row-2"
+      (click)="swich_list('block-row-2')"
+    ></circle-progress>
+    <circle-progress
+      [percent]=value3
+      [radius]="50"
+      [outerStrokeWidth]="6"
+      [innerStrokeWidth]="3"
+      [outerStrokeColor]="'#aa3987'"
+      [innerStrokeColor]="'#fca1e0'"
+      [animation]="true"
+      [animationDuration]="300"
+      value="block-row-3"
+      (click)="swich_list('block-row-3')"
+  ></circle-progress>
+  </div>
+
+
+
+
+    <circle-progress
+    [percent]=value4
+    [radius]="130"
+    [outerStrokeWidth]="8"
+    [innerStrokeWidth]="3"
+    [outerStrokeColor]="'#aa3987'"
+    [innerStrokeColor]="'#fca1e0'"
+    [animation]="true"
+    [animationDuration]="300"
+  ></circle-progress>
+
+</mat-card-content>
+</mat-card>

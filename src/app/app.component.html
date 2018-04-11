@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="mat-app-background basic-container">
+  <div style="text-align:center">
+      <h1>
+        Hi I am Andru Ischenko I create this Demo!
+      </h1>
+    
+    </div>
+    <div class="size">
+      <div class="box">
+        <mat-slider type="range" min="0" max="100" step="5" [(ngModel)]="value"></mat-slider>
+    
+        <mat-form-field class="example-margin">
+          <input matInput type="number" placeholder="Value" [(ngModel)]="value">
+        </mat-form-field>
+        
+        <circle-progress
+          [percent]=value
+          [radius]="100"
+          [outerStrokeWidth]="10"
+          [innerStrokeWidth]="3"
+          [outerStrokeColor]="'#aa3987'"
+          [innerStrokeColor]="'#fca1e0'"
+          [animation]="true"
+          [animationDuration]="300"
+        ></circle-progress>
+      </div>
+    </div>
+</div>
+
+
+<app-exempl-controll></app-exempl-controll>

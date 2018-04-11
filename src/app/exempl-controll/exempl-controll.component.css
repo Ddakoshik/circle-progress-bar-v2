@@ -1,0 +1,18 @@
+.example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+  .box{display: flex; flex-direction: row; align-items: center;}
+  .column{display: flex; flex-direction: column;}
+  .main-option-row{display: flex; flex-direction: row; justify-content: space-around; align-items: center;}
+  .option-box{width: 50%;}
